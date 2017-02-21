@@ -7,3 +7,11 @@ angular.module('FullStackApp', [])
     $http.get('/departments/').success(function(data) {
         $scope.departments = data;
     })});
+	
+	$scope.addDepartment = function(){
+		
+		$scope.departments.push({'name':$scope.name});
+		$scope.name='';
+		
+		
+	};
