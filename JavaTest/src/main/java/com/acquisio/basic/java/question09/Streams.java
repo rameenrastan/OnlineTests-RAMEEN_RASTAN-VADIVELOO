@@ -1,9 +1,12 @@
 package com.acquisio.basic.java.question09;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
+import java.util.ArrayList;
 
 /**
  * QUESTION 09: Streams (https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
@@ -34,6 +37,13 @@ public class Streams {
 
     private void convertCarts(File input, File output) throws IOException {
         // TODO: Insert your code here.
+    	
+    	//read the input file
+    	FileReader fileReader = new FileReader(input);
+    	BufferedReader reader = new BufferedReader(fileReader);
+    	
+    	
+    	
     }
 
 }
