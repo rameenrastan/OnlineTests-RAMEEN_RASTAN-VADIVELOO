@@ -50,17 +50,24 @@ public class Streams {
     	
     	
     	String line;
+    	//loops through every entry in the CSV file
 		while((line = buffReader.readLine()) != null){
     		
 			String[] columns = line.split(",");
     		
+			//removes entries with amount<50
 			if(Integer.parseInt(columns[1])<50 ){
 				
 				continue;
 			}
 			else{
+				//add taxes column
 				String taxes = String.valueOf(Integer.parseInt(columns[1])*0.15);
-				writer.write(line + "," + taxes);
+				//add total column
+				String total = String.valueOf(String.valueOf(taxes)+Integer.parseInt(columns[1]));
+				
+				//write modified entry to output file
+				writer.write(line + "," + taxes + "," + total);
 				
 			}
     		
