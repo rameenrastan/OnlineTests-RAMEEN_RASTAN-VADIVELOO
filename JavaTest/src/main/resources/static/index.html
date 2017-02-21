@@ -32,7 +32,7 @@
                     <ul>
                         <li>ID: {{employee.id}}</li> 
                         <li>Salaire: {{employee.salary}} $ <br>Edit Salary: <input type="text" name="salary"> <button>Submit</button></li>
-                        <li>Département: {{employee.department.name}} <br> Change Department: <select ><option ng-repeat="department in departments" value="{{employee.department.name}}">{{department.name}}</option></select><button>Submit</button></li>
+                        <li>Département: {{employee.department.name}} <br> Change Department: <select ng-controller="departments" ><option ng-repeat="department in departments" value="name">{{department.name}}</option></select><button>Submit</button></li>
 						
                     </ul>
                 </div>
