@@ -50,7 +50,8 @@ public class Aggregation {
 
           
             // See requirement in this class javadoc
-            String query = "SELECT projects.title, COUNT(employees.id) FROM employees INNER JOIN projects ON employees_projects.project_id = project.id";
+            String query = "SELECT projects.title, COUNT(employees.id) FROM employees "
+            		+ "INNER JOIN projects ON employees_projects.project_id = project.id";
 
             ResultSet resultSet = conn.createStatement().executeQuery(query);
             H2DBUtil.displayResultSet(resultSet);
