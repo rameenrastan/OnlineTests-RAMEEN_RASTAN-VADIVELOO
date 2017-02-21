@@ -8,6 +8,14 @@ class Customer {
         this.type = type;
         this.monthlyFee = monthlyFee;
     }
+    
+    //method to add a customer without directly calling constructor (abstracts creation process)
+    public Customer makeCustomer(String type, double monthleeFee){
+    	
+    	Customer customer = new Customer(type,monthleeFee);
+    	return customer;
+    	
+    }
 
     public String getType() {
         return type;
