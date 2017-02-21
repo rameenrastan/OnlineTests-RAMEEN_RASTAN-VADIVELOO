@@ -1,9 +1,12 @@
 package com.acquisio.basic.java.question09;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -40,9 +43,22 @@ public class Streams {
     	
     	//read the input file
     	FileReader fileReader = new FileReader(input);
-    	BufferedReader reader = new BufferedReader(fileReader);
+    	BufferedReader buffReader = new BufferedReader(fileReader);
+    	
+    	//write to output file
+    	PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)));
     	
     	
+    	String line;
+		while((line = buffReader.readLine()) != null){
+    		
+			String[] columns = line.split(",");
+    		
+    		
+    		
+    	}
+		
+		buffReader.close();
     	
     }
 
