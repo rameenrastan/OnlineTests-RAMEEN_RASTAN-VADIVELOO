@@ -32,6 +32,7 @@ public class TreeNavigation {
         Node n = new Node("2", n2, n4);
         // TODO: Implement code here
         
+        //print root node
         System.out.println(".." +n.name);
         System.out.println("...." + n.children[0].name);
         

@@ -14,10 +14,18 @@ public class ConvertToBinary {
 
     public static void main(String[] args) {
         ConvertToBinary instance = new ConvertToBinary();
-        System.out.println(instance.convertToBinary(17));
+       instance.convertToBinary(17);
     }
 
-    private String convertToBinary(int val) {
-        return null; // TODO: Insert your code here.
+    private void convertToBinary(int val) {
+    	
+    	if(val > 0){
+    		
+    		convertToBinary(val/2);
+    		
+    		System.out.print(val % 2 + "");
+    		
+    	}
     }
 }
+
