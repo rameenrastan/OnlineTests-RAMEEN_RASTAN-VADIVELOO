@@ -20,7 +20,7 @@
         </ul>
 		<form ng-submit="addDepartment()">
 		Add new department:
-		<input type=text" name="name" ng-model="name"></input>
+		<input type=text" name="name" ng-model="department.name"></input>
 		<input type="submit" value = "Submit">
     </div>
     <div ng-controller="employees" ng-cloak class="ng-cloak">
@@ -31,8 +31,11 @@
                     Nom: {{employee.firstName}} {{employee.lastName}}<br/>
                     <ul>
                         <li>ID: {{employee.id}}</li> 
-                        <li>Salaire: {{employee.salary}} $ <br>Edit Salary: <input type="text" name="salary"> <button>Submit</button></li>
-                        <li>Département: {{employee.department.name}} <br> Change Department: <select ng-controller="departments" ><option ng-repeat="department in departments" value="name">{{department.name}}</option></select><button>Submit</button></li>
+                        <li>Salaire: {{employee.salary}} $ <br>Edit Salary: <form ng-submit="updateSalary()"> <input type="text" ng-model="employee.salary" name="salary"> <input type="submit" value = "Submit"> </form></li>
+                        <li>Département: {{employee.department.name}} <br> Change Department:
+						<form ng-submit="changeSalary()">
+						<select ng-controller="departments" ><option ng-model="department.name" ng-repeat="department in departments" value="name">{{department.name}}</option></select>
+						<input type="submit" value = "Submit"></li>
 						
                     </ul>
                 </div>

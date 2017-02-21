@@ -15,3 +15,16 @@ angular.module('FullStackApp', [])
 		
 		
 	};
+
+	$scope.updateSalary = function(){
+		
+		$scope.salary = 'employee.salary' 
+		
+		
+	}
+	
+	$scope.changeDepartment = function(){
+		
+		$scope.name = 'department.name'
+		
+	}
