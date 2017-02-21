@@ -18,10 +18,10 @@
         <ul>
             <li ng-repeat="department in departments">{{ department.name }}</li>
         </ul>
-		<form>
+		<form ng-submit="addDepartment()">
 		Add new department:
-		<input type=text" name="newDepartment"></input>
-		<button>Submit</button>
+		<input type=text" name="name" ng-model="name"></input>
+		<input type="submit" value = "Submit">
     </div>
     <div ng-controller="employees" ng-cloak class="ng-cloak">
         <h3>Employés</h3>
