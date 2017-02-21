@@ -54,6 +54,15 @@ public class Streams {
     		
 			String[] columns = line.split(",");
     		
+			if(Integer.parseInt(columns[1])<50 ){
+				
+				continue;
+			}
+			else{
+				String taxes = String.valueOf(Integer.parseInt(columns[1])*0.15);
+				writer.write(line + "," + taxes);
+				
+			}
     		
     		
     	}
