@@ -4,22 +4,26 @@ package com.acquisio.basic.java.question05;
 import java.util.ArrayList;
 import java.util.List;
 
-class Inventory {
+//generic class (any object T that extends Item)
+class Inventory<T extends Item> {
 
-    private List<Item> items = new ArrayList<>();
+	//generic array list (takes any type T that extends item)
+    private List<T> items = new ArrayList<>();
 
-    public void add(Item item) {
+    
+    //all methods have been modified to return a generic type T that extends item
+    public void add(T item) {
         items.add(item);
     }
 
-    public Item getFirst() {
+    public T getFirst() {
         if (items.size() > 0) {
             return items.get(0);
         }
         return null;
     }
 
-    public Item getLast() {
+    public T getLast() {
         int size = items.size();
         if (size > 0) {
             return items.get(size - 1);
@@ -28,12 +32,12 @@ class Inventory {
     }
 
 
-    public boolean remove(Item item) {
+    public boolean remove(T item) {
         return items.remove(item);
     }
 
-    public Item findFirst(String name) {
-        for (Item item : items) {
+    public T findFirst(String name) {
+        for (T item : items) {
             if (item.getName().equals(name)) {
                 return item;
             }

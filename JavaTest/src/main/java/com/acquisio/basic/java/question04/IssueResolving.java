@@ -14,8 +14,6 @@ public class IssueResolving {
     }
 
     private int factorial(int n) {
-        // TODO: Fix code here.
-    	
         
         //base case
         if(n==1 || n==0){
