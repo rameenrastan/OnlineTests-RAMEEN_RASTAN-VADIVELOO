@@ -21,6 +21,19 @@ public class FizzBuzz {
     }
 
     private void fizzBuzz(int maxValue) {
-        // TODO: Insert your code here
+       //loops through every integer value between 0 and the input value
+    	for(int i=0; i<=maxValue; i++){
+    		
+    		//check if value is divisible by itself
+    		if(i % i == 0){
+    			//skips to next iteration (does not print)
+    			continue;
+    			
+    		}
+    		
+    		
+    		
+    		
+    	}
     }
 }
