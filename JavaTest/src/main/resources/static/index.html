@@ -18,6 +18,10 @@
         <ul>
             <li ng-repeat="department in departments">{{ department.name }}</li>
         </ul>
+		<form>
+		Add new department:
+		<input type=text" name="newDepartment"></input>
+		<button>Submit</button>
     </div>
     <div ng-controller="employees" ng-cloak class="ng-cloak">
         <h3>Employés</h3>
@@ -26,9 +30,10 @@
                 <div>
                     Nom: {{employee.firstName}} {{employee.lastName}}<br/>
                     <ul>
-                        <li>ID: {{employee.id}}</li>
-                        <li>Salaire: {{employee.salary}} $</li>
-                        <li>Département: {{employee.department.name}}</li>
+                        <li>ID: {{employee.id}}</li> 
+                        <li>Salaire: {{employee.salary}} $ <br>Edit Salary: <input type="text" name="salary"> <button>Submit</button></li>
+                        <li>Département: {{employee.department.name}} <br> Change Department: <select ><option ng-repeat="department in departments" value="{{employee.department.name}}">{{department.name}}</option></select><button>Submit</button></li>
+						
                     </ul>
                 </div>
             </li>
