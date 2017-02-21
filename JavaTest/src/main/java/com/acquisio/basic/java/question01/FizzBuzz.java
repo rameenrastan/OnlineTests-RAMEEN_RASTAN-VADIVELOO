@@ -24,13 +24,32 @@ public class FizzBuzz {
        //loops through every integer value between 0 and the input value
     	for(int i=0; i<=maxValue; i++){
     		
-    		//check if value is divisible by itself
-    		if(i % i == 0){
+    		//0 is the only value not divisble by itself, and therefore skip to next iteration
+    		if(i == 0){
+    			
     			//skips to next iteration (does not print)
     			continue;
     			
+    		} 
+    		//print "Fizz" if divisible by 3
+    		if(i % 3 == 0){
+    			
+    			System.out.println("Fizz");
+    			
+    			
     		}
-    		
+    		//print "Buzz" if divisible by 5
+    		else if(i % 5 == 0){
+    			
+    			System.out.println("Buzz");
+    		}
+    		//else print current value
+    		else{
+    			
+    			
+    			System.out.println(i);
+    			
+    		}
     		
     		
     		
